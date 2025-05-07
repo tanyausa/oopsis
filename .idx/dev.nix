@@ -27,11 +27,11 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        install = "mvn clean install";
+        install = "./mvnw clean install -DskipTests";
       };
       # Runs when a workspace is (re)started
       onStart = {
-        run-server = "PORT=3000 mvn spring-boot:run";
+        run-server = "PORT=3000 ./mvnw spring-boot:run";
       };
     };
   };
